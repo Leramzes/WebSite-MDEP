@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Municipalidad de Puerto Eten</title>
+    <!-- ICONO DE PAGINA -->
+    <link rel="shortcut icon" href="images/logoPNG.ico" type="image/x-icon">
+    <!-- ARCHIVO CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <div class="main-content">
+        <!-- HEADER -->
+        <div id="header"></div>
+
+        <!-- Autoridades -->
+        <div class="container mt-5">
+            <!-- Subtítulo -->
+            <h2 class="section-subtitle"><i class="fa-solid fa-users"></i> Directorio de Funcionarios</h2>
+
+            <!-- Panel de selección -->
+            <ul class="nav nav-pills justify-content-center mb-4" id="authoritiesPanel">
+                <li class="nav-item">
+                    <a class="nav-link active" id="alcalde-tab" data-toggle="pill" href="#alcalde">Alcalde</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="gerente-tab" data-toggle="pill" href="#gerente">Gerente</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="regidores-tab" data-toggle="pill" href="#regidores">Regidores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="organos-tab" data-toggle="pill" href="#organos">Órgano Desconcentrado</a>
+                </li>
+            </ul>
+
+            <!-- Panel de contenido -->
+            <div class="tab-content">
+                <!-- Alcalde -->
+                <div id="alcalde" class="container tab-pane active">
+                    <div class="d-flex justify-content-center">
+                        <!-- Card para el alcalde -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="images/alcalde.jpg" class="card-img-top" alt="Alcalde">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del Alcalde</h5>
+                                    <p class="card-text">Información breve sobre el alcalde.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Gerente -->
+                <div id="gerente" class="container tab-pane fade">
+                    <div class="d-flex justify-content-center">
+                        <!-- Card para el gerente -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="images/gerente.jpg" class="card-img-top" alt="Gerente">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del Gerente</h5>
+                                    <p class="card-text">Información breve sobre el gerente.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Regidores -->
+                <div id="regidores" class="container tab-pane fade">
+                    <div class="d-flex justify-content-center flex-wrap">
+                        <!-- Card para un regidor -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="images/regidor.jpg" class="card-img-top" alt="Regidor">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del Regidor</h5>
+                                    <p class="card-text">Información breve sobre el regidor.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="images/regidor.jpg" class="card-img-top" alt="Regidor">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del Regidor</h5>
+                                    <p class="card-text">Información breve sobre el regidor.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Órgano Desconcentrado -->
+                <div id="organos" class="container tab-pane fade">
+                    <div class="d-flex justify-content-center">
+                        <!-- Card para el órgano desconcentrado -->
+                        <div class="col-md-3 mb-4">
+                            <div class="card">
+                                <img src="images/organos.jpg" class="card-img-top" alt="Órgano Desconcentrado">
+                                <div class="card-body">
+                                    <h5 class="card-title">Órgano Desconcentrado</h5>
+                                    <p class="card-text">Información breve sobre el órgano desconcentrado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div id="footer"></div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Include html's -->
+    <script>
+        function loadHTML(selector, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                });
+        }
+
+        loadHTML('#header', 'header.html');
+        loadHTML('#footer', 'footer.html');
+    </script>
+</body>
+
+</html>

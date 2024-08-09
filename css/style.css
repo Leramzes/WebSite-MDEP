@@ -1,0 +1,407 @@
+/* General */
+html,
+body {
+  height: 100%;
+  /* Asegura que el body y html ocupen el 100% de la altura */
+  margin: 0;
+  padding: 0;
+}
+
+/* Contenedor principal para asegurar que el contenido principal y el footer se extiendan correctamente */
+.main-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar {
+  padding: 0.5rem 1rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente las imágenes y el texto */
+}
+
+.navbar-brand img {
+  max-height: 100px;
+  /* Tamaño máximo ajustado para las imágenes del logo */
+  margin-right: 15px;
+  /* Espacio entre imagen y texto */
+}
+
+.navbar-nav {
+  flex: 1;
+  /* Permite que el menú de navegación ocupe el espacio disponible */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 20px;
+  position: relative;
+  /* Necesario para el posicionamiento del dropdown */
+}
+
+.navbar-nav .nav-link {
+  color: #666666 !important;
+  /* Color ajustado */
+  font-size: 1.2rem;
+  /* Tamaño de fuente ajustado */
+  font-weight: 600;
+  /* Fuente más gruesa */
+  text-transform: uppercase;
+  /* Convierte el texto a mayúsculas */
+  display: flex;
+  align-items: center;
+  /* Centra verticalmente el texto y las imágenes */
+  text-decoration: none;
+  /* Elimina subrayado predeterminado */
+  position: relative;
+  /* Para la línea debajo */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #046d8b !important;
+  /* Color naranja al pasar el cursor */
+}
+
+.navbar-nav .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  /* Ajusta según el espacio entre el texto y la línea */
+  width: 100%;
+  height: 2px;
+  /* Grosor de la línea */
+  background-color: #046d8b;
+  /* Color de la línea */
+}
+
+.dropdown-menu {
+  background-color: #f8f9fa;
+  border: none;
+  /* Elimina borde predeterminado */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  /* Sombra similar a la del header */
+  display: none;
+  /* Inicialmente oculto */
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  /* Transiciones suaves */
+  position: absolute;
+  /* Posiciona el menú */
+  top: 100%;
+  /* Posiciona el menú debajo del enlace */
+  left: 0;
+  z-index: 1000;
+  /* Asegura que el menú esté encima de otros elementos */
+  width: 250px;
+  /* Ancho ajustado según el contenido del menú */
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+  /* Muestra el menú al pasar el cursor sobre el contenedor */
+  opacity: 1;
+}
+
+.navbar-nav .nav-item.dropdown:hover>.nav-link {
+  color: #046d8b !important;
+  /* Color naranja para el texto de "Institucional" cuando se pasa el cursor */
+}
+
+.navbar-nav .nav-item.dropdown:hover>.nav-link::after {
+  content: "";
+  /* Flechita permanece visible y en color naranja */
+  background-color: #046d8b;
+  /* Color de la flecha al pasar el cursor */
+}
+
+.dropdown-menu .dropdown-item {
+  color: #666666;
+  /* Color igual al de las opciones del menú principal */
+  font-weight: 600;
+  /* Fuente igual de gruesa que las opciones del menú principal */
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #e9ecef;
+  /* Color de fondo al pasar el cursor */
+}
+
+.ml-auto img#portal {
+  max-height: 100px;
+  /* Tamaño máximo ajustado según lo necesario */
+  margin-left: 15px;
+  /* Espacio a la izquierda de la imagen */
+  display: block;
+  /* Asegura que la imagen se comporte como un bloque */
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23666' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 4h12M2 8h12M2 12h12'/%3E%3C/svg%3E");
+}
+
+/* Carrusel */
+.carousel-container {
+  max-width: 100%;
+  /* Ajusta el ancho del carrusel */
+  margin: 0 auto;
+  /* Centra el carrusel horizontalmente */
+  border-radius: 15px;
+  /* Puntas ovaladas */
+  overflow: hidden;
+  /* Esconde los bordes salientes */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Sombra para un mejor efecto visual */
+}
+
+.carousel-item img {
+  width: 100%;
+  /* Asegura que las imágenes ocupen todo el ancho del carrusel */
+  height: 450px;
+  object-fit: cover;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo oscuro para mejor visibilidad */
+  border-radius: 50%;
+  /* Redondea los iconos */
+  padding: 10px;
+  /* Espacio interno para agrandar el área clicable */
+}
+
+.carousel-inner h5 {
+  font-size: 70px;
+  text-transform: uppercase;
+  position: relative;
+  font-family: Impact;
+}
+
+/* Datos distrito */
+.datosdistrito{
+  margin-bottom: -20px;
+}
+.info-box {
+  background-color: #f8f9fa; /* Fondo claro para las cajas de información */ 
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+}
+
+.info-box:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.info-box h4 {
+  color: #2e4550; /* Color del título */
+  margin-bottom: 15px;
+}
+
+.info-box p {
+  color: #333; /* Color del texto */
+  font-size: 1rem;
+}
+
+/*Ubicacion*/
+.map-container {
+  width: 90%;
+  margin: 20px auto;
+  height: 500px; /* Ajusta la altura según tus necesidades */
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+iframe {
+  width: 100%;
+  height: 100%;
+  border: 0; /* Elimina el borde del iframe */
+}
+
+/* Autoridades Panel */
+.nav-item {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.nav-pills .nav-link {
+  border-radius: 15px 15px 0 0 !important;
+  /* Bordes redondeados en la parte superior */
+  background-color: #efb810;
+  /* Color de fondo del panel */
+  color: white;
+  /* Color del texto */
+  padding: 10px 15px;
+  /* Espaciado interno */
+  margin: 2px 6px;
+  border-bottom: none;
+}
+
+.nav-pills .nav-link:hover {
+  background-color: #42d81c;
+  /* Color de fondo al pasar el cursor */
+}
+
+.nav-pills .nav-link.active {
+  background-color: #42d81c !important;
+  /* Color de fondo cuando está activo */
+  border-color: #42d81c !important;
+}
+
+.tab-content {
+  padding: 0 25px;
+}
+
+.card {
+  border-radius: 10px;
+  /* Bordes redondeados de las tarjetas */
+  overflow: hidden;
+  /* Asegura que las imágenes se ajusten dentro de la tarjeta */
+}
+
+.card-img-top {
+  border-bottom: 1px solid #ddd;
+  /* Línea divisoria entre imagen y contenido */
+}
+
+.card-body {
+  padding: 15px;
+  /* Espaciado interno en el cuerpo de la tarjeta */
+}
+
+/* Nuevos Subtítulos */
+.section-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Areas y servicios */
+.servContent{
+  padding: 30px;
+}
+.service-card {
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.service-card h5 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.service-card p {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  background-color: #2e4550;
+  /* Fondo del footer */
+  padding: 2rem 0;
+  color: #cccccc;
+  /* Color de las letras */
+  margin-top: auto;
+  /* Empuja el footer hacia abajo */
+}
+
+.footer h4 {
+  font-size: 1.2rem;
+  /* Tamaño de fuente reducido */
+  margin-bottom: 1rem;
+  color: #ffffff;
+  /* Color de las letras */
+  font-weight: 600;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer ul li a {
+  color: #cccccc;
+  /* Color inicial de las letras */
+  text-decoration: none;
+}
+
+.footer ul li a:hover {
+  color: #ffffff;
+  /* Color blanco al pasar el cursor */
+  text-decoration: underline;
+}
+
+.footer .social-media {
+  padding: 0;
+}
+
+.footer .social-media li {
+  display: inline;
+  margin-right: 15px;
+}
+
+.footer .social-media li a {
+  color: #cccccc;
+  /* Color inicial de las letras */
+  font-size: 1.1rem;
+  /* Tamaño de fuente reducido */
+}
+
+.footer .social-media li a:hover {
+  color: #ffffff;
+  /* Color blanco al pasar el cursor */
+}
+
+.footer p {
+  margin: 1rem 0;
+  color: #cccccc;
+  /* Color inicial de las letras */
+}
+
+.footer img {
+  max-width: 150px;
+  /* Tamaño máximo del logo */
+  height: auto;
+  /* Mantiene la proporción */
+  margin-bottom: 1rem;
+  /* Espacio debajo del logo */
+}

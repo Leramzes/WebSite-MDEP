@@ -282,7 +282,16 @@ iframe {
 
 .card-body {
   padding: 15px;
+  text-align: center;
   /* Espaciado interno en el cuerpo de la tarjeta */
+}
+.card-body a{
+  text-decoration: none;
+  color: #000;
+}
+.card-body a:hover {
+  text-decoration: none; /* Asegura que no se subraye al pasar el cursor */
+  color: #046d8b; /* Cambia el color al hacer hover, opcional */
 }
 
 /* Nuevos Subtítulos */

@@ -31,7 +31,7 @@ header {
 }
 
 .navbar-brand img {
-  max-height: 100px;
+  max-height: 80px;
   /* Tamaño máximo ajustado para las imágenes del logo */
   margin-right: 15px;
   /* Espacio entre imagen y texto */
@@ -54,9 +54,9 @@ header {
 .navbar-nav .nav-link {
   color: #666666 !important;
   /* Color ajustado */
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   /* Tamaño de fuente ajustado */
-  font-weight: 600;
+  font-weight: 500;
   /* Fuente más gruesa */
   text-transform: uppercase;
   /* Convierte el texto a mayúsculas */
@@ -140,7 +140,7 @@ header {
 }
 
 .ml-auto img#portal {
-  max-height: 100px;
+  max-height: 80px;
   /* Tamaño máximo ajustado según lo necesario */
   margin-left: 15px;
   /* Espacio a la izquierda de la imagen */

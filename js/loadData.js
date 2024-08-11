@@ -1,0 +1,44 @@
+
+// Cargar y mostrar autoridades desde el CSV
+const csvFilePath = '/data/autoridades.csv';
+
+fetch(csvFilePath)
+    .then(response => response.text())
+    .then(csvText => processAuthoritiesCSV(csvText))
+    .catch(error => console.error('Error al cargar el archivo CSV:', error));
+
+function processAuthoritiesCSV(csvText) {
+    const rows = csvText.split('\n').slice(1); // Divide el texto en filas y omite el encabezado
+
+    const alcaldeContainer = document.querySelector('#alcalde .d-flex');
+    const gerenteContainer = document.querySelector('#gerente .d-flex');
+    const regidoresContainer = document.querySelector('#regidores .d-flex');
+
+    rows.forEach(row => {
+        const cols = row.split(',');
+        const rol = cols[0].trim();
+        const nombre = cols[1].trim();
+        const email = cols[2].trim();
+        const link = cols[3].trim();
+
+        const cardHTML = `
+            <div class="col-md-4 mb-3">
+                <div class="card">
+                    <img src="/images/consejo/image.png" class="card-img-top" alt="${rol}">
+                    <div class="card-body">
+                        <a href="${link}" target="_blank"><h5 class="card-title">${nombre}</h5></a>
+                        <p class="card-text">${email}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        if (rol === 'Alcalde') {
+            alcaldeContainer.innerHTML = cardHTML;
+        } else if (rol === 'Gerente') {
+            gerenteContainer.innerHTML = cardHTML;
+        } else if (rol === 'Regidor') {
+            regidoresContainer.innerHTML += cardHTML;
+        }
+    });
+}

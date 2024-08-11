@@ -1,69 +1,42 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla de Personas</title>
-    <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-    </style>
+    <title>Municipalidad de Puerto Eten</title>
+    <!-- ICONO DE PAGINA -->
+    <link rel="shortcut icon" href="images/logoPNG.ico" type="image/x-icon">
+    <!-- ARCHIVO CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <h1>Datos de Personas</h1>
-    <table id="dataTable">
-        <thead>
-            <tr>
-                <th>Nombre</th>
-                <th>Apellido</th>
-                <th>Email</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Las filas de la tabla se generarán aquí -->
-        </tbody>
-    </table>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center">
+            <!-- Línea horizontal -->
+            <hr style="border: 1px solid #ccc; width: 100%;">
+            
+            <!-- Logo y Copyright -->
+            <div>
+                <img src="./images/logoPNG.png" alt="LogoPuertoEten" style="height: 40px; margin-top: 10px;">
+                <p>&copy; 2024 Municipalidad de Puerto Eten. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    
+    
 
-    <script>
-        // Especifica la ruta del archivo CSV
-        const csvFilePath = 'prueba.csv';
-
-        fetch(csvFilePath)
-            .then(response => response.text())
-            .then(text => processCSV(text))
-            .catch(error => console.error('Error al cargar el archivo CSV:', error));
-
-        function processCSV(csvText) {
-            const rows = csvText.split('\n').slice(1); // Divide el texto en filas y omite el encabezado
-            const tableBody = document.querySelector('#dataTable tbody');
-            tableBody.innerHTML = ''; // Limpia la tabla antes de agregar datos
-
-            rows.forEach(row => {
-                const cols = row.split(',');
-                const tr = document.createElement('tr');
-
-                cols.forEach(col => {
-                    const td = document.createElement('td');
-                    td.textContent = col.trim(); // Elimina los espacios en blanco al inicio y final
-                    tr.appendChild(td);
-                });
-
-                tableBody.appendChild(tr);
-            });
-        }
-    </script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>

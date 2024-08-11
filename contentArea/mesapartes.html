@@ -1,91 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Municipalidad de Puerto Eten</title>
-    <!-- ICONO DE PAGINA -->
-    <link
-      rel="shortcut icon"
-      href="/images/logoPNG.ico"
-      type="image/x-icon"
-    />
-    <!-- ARCHIVO CSS -->
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="styleAreas.css" />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-    />
-  </head>
-  <body>
-    <div class="main-content">
-      <!-- HEADER -->
-      <div id="header"></div>
 
-      <!-- CONTENT -->
-      <div class="container mt-5">
-        <div class="row">
-          <!-- Tarjeta del encargado -->
-          <div class="col-md-4">
-            <div class="card">
-              <img
-                src="https://c1.klipartz.com/pngpicture/823/765/sticker-png-login-icon-system-administrator-user-user-profile-icon-design-avatar-face-head.png"
-                class="card-img-top"
-                alt="Encargado del Área"
-              />
-              <div class="card-body">
-                <h4 class="card-title">Nombre del Encargado</h4>
-                <p class="card-text">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
-                <div class="contact-info">
-                  <p><i class="fas fa-envelope"></i> correo@municipalidad.pe</p>
-                </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Municipalidad de Puerto Eten</title>
+  <!-- ICONO DE PAGINA -->
+  <link rel="shortcut icon" href="/images/logoPNG.ico" type="image/x-icon" />
+  <!-- ARCHIVO CSS -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="styleAreas.css" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+
+<body>
+  <div class="main-content">
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- CONTENT -->
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Tarjeta del encargado -->
+        <div class="col-md-4">
+          <div class="card">
+            <img
+              src="https://c1.klipartz.com/pngpicture/823/765/sticker-png-login-icon-system-administrator-user-user-profile-icon-design-avatar-face-head.png"
+              class="card-img-top" alt="Encargado del Área" />
+            <div class="card-body">
+              <h4 class="card-title">Nombre del Encargado</h4>
+              <p class="card-text">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+              <div class="contact-info">
+                <p><i class="fas fa-envelope"></i> correo@municipalidad.pe</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <!-- Información del área -->
-          <div class="col-md-8">
-            <div class="area-info">
-              <h3>Información del Área</h3>
-              <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
-                maxime aspernatur reiciendis cumque rem. Facilis, eum
-                voluptatibus? Sequi maiores explicabo ex, et, inventore officiis
-                doloremque amet, alias veritatis error dolores.
-              </p>
-              <ul>
-                <li>Responsabilidad 1</li>
-                <li>Responsabilidad 2</li>
-                <li>Proyecto en curso</li>
-              </ul>
-            </div>
+        <!-- Información del área -->
+        <div class="col-md-8">
+          <div class="area-info">
+            <h3>Información del Área</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              maxime aspernatur reiciendis cumque rem. Facilis, eum
+              voluptatibus? Sequi maiores explicabo ex, et, inventore officiis
+              doloremque amet, alias veritatis error dolores.
+            </p>
+            <ul>
+              <li>Responsabilidad 1</li>
+              <li>Responsabilidad 2</li>
+              <li>Proyecto en curso</li>
+            </ul>
           </div>
         </div>
       </div>
-
-      <!-- FOOTER -->
-      <p>Footer</p>
     </div>
 
-    <!-- Include html's -->
-    <script>
-      function loadHTML(selector, url) {
-        fetch(url)
-          .then((response) => response.text())
-          .then((data) => {
-            document.querySelector(selector).innerHTML = data;
-          });
-      }
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container text-center">
+        <!-- Línea horizontal -->
+        <hr style="border: 1px solid #ccc; width: 100%;">
 
-      loadHTML("#header", "../header.html");
-      loadHTML("#footer", "../footer.html");
-    </script>
-  </body>
+        <!-- Logo y Copyright -->
+        <div>
+          <img src="/images/logoPNG.png" alt="LogoPuertoEten" style="height: 40px; margin-top: 10px;">
+          <p>&copy; 2024 Municipalidad de Puerto Eten. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Include html's -->
+  <script>
+    function loadHTML(selector, url) {
+      fetch(url)
+        .then((response) => response.text())
+        .then((data) => {
+          document.querySelector(selector).innerHTML = data;
+        });
+    }
+
+    loadHTML("#header", "../header.html");
+    loadHTML("#footer", "../footer.html");
+  </script>
+</body>
+
 </html>

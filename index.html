@@ -1,109 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Municipalidad de Puerto Eten</title>
     <!-- ICONO DE PAGINA -->
-    <link rel="shortcut icon" href="images/logoPNG.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/logoPNG.ico" type="image/x-icon" />
     <!-- ARCHIVO CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <div class="main-content">
-        <!-- HEADER -->
-        <div id="header"></div>
+      <!-- HEADER -->
+      <div id="header"></div>
 
-        <!-- CARRUSEL -->
-        <div class="container mt-5">
-            <div id="carouselExampleCaptions" class="carousel slide carousel-container" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="images/carrusel/puerto.jpg" class="d-block w-100" alt="Image 1">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Puerto Eten</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/carrusel/fondadero.jpg" class="d-block w-100" alt="Image 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Fondadero</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="https://cdn.pixabay.com/photo/2017/09/23/19/37/spring-2779931_1280.jpg" class="d-block w-100" alt="Image 2">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Muelle</h5>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="images/carrusel/faroPto.jpg" class="d-block w-100" alt="Image 3">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>El Faro</h5>
-                        </div>
-                    </div>
-                </div>
-                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Anterior</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Siguiente</span>
-                </a>
+      <!-- CARRUSEL -->
+      <div class="container mt-5">
+        <div
+          id="carouselExampleCaptions"
+          class="carousel slide carousel-container"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="images/carrusel/puerto.jpg"
+                class="d-block w-100"
+                alt="Image 1"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Puerto Eten</h5>
+              </div>
             </div>
-        </div>
-
-        <!-- DATOS DEL DISTRITO -->
-        <div class="container mt-5 datosdistrito">
-            <h2 class="section-subtitle"><i class="fa-solid fa-city"></i> Datos del Distrito</h2>
-            <div class="row justify-content-center">
-                <!-- Cuadro de Población -->
-                <div class="col-md-4 mb-4">
-                    <div class="info-box">
-                        <h4>Población</h4>
-                        <h5>---- Habitantes</h5>
-                        <p>Datos tomados del último Censo-----</p>
-                    </div>
-                </div>
-
-                <!-- Cuadro de Ubicación -->
-                <div class="col-md-4 mb-4">
-                    <div class="info-box">
-                        <h4>Ubicación</h4>
-                        <h5>Puerto Eten, Chiclayo, Lambayeque</h5>
-                        <p>Departamento de Lambayeque</p>
-                    </div>
-                </div>
-
-                <!-- Cuadro de Alcalde -->
-                <div class="col-md-4 mb-4">
-                    <div class="info-box">
-                        <h4>Alcalde</h4>
-                        <h5>Luis Enrique Baca Castañeda</h5>
-                        <p>5 Regidores<br>Periodo 2023-2026</p>
-                    </div>
-                </div>
+            <div class="carousel-item">
+              <img
+                src="images/carrusel/fondadero.jpg"
+                class="d-block w-100"
+                alt="Image 2"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Fondadero</h5>
+              </div>
             </div>
-        </div>
-
-        <!-- UBICACION GEOGRAFICA -->
-        <div class="container mt-5 mapaContenedor">
-            <h2 class="section-subtitle"><i class="fa-solid fa-map-location"></i> Ubicación Geográfica</h2>
-            <div class="map-container">
-                <!-- Reemplaza el src con el enlace del iframe copiado de Google Maps -->
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15842.833428906013!2d-79.88407284458006!3d-6.925422999999982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ce3a487506793%3A0xbd8cafc37fbbb87c!2sMunicipalidad%20de%20Puerto%20Eten!5e0!3m2!1ses!2spe!4v1723153198469!5m2!1ses!2spe" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-
-                </iframe>
+            <div class="carousel-item">
+              <img
+                src="https://cdn.pixabay.com/photo/2017/09/23/19/37/spring-2779931_1280.jpg"
+                class="d-block w-100"
+                alt="Image 2"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Muelle</h5>
+              </div>
             </div>
+            <div class="carousel-item">
+              <img
+                src="images/carrusel/faroPto.jpg"
+                class="d-block w-100"
+                alt="Image 3"
+              />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>El Faro</h5>
+              </div>
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleCaptions"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Siguiente</span>
+          </a>
         </div>
+      </div>
 
-        <!-- FOOTER -->
-        <div id="footer"></div>
+      <!-- DATOS DEL DISTRITO -->
+      <div class="container mt-5 datosdistrito">
+        <h2 class="section-subtitle">
+          <i class="fa-solid fa-city"></i> Datos del Distrito
+        </h2>
+        <div class="row justify-content-center">
+          <!-- Cuadro de Población -->
+          <div class="col-md-4 mb-4">
+            <div class="info-box">
+              <h4>Población</h4>
+              <h5>---- Habitantes</h5>
+              <p>Datos tomados del último Censo-----</p>
+            </div>
+          </div>
+
+          <!-- Cuadro de Ubicación -->
+          <div class="col-md-4 mb-4">
+            <div class="info-box">
+              <h4>Ubicación</h4>
+              <h5>Puerto Eten, Chiclayo, Lambayeque</h5>
+              <p>Departamento de Lambayeque</p>
+            </div>
+          </div>
+
+          <!-- Cuadro de Alcalde -->
+          <div class="col-md-4 mb-4">
+            <div class="info-box">
+              <h4>Alcalde</h4>
+              <h5>Luis Enrique Baca Castañeda</h5>
+              <p>5 Regidores<br />Periodo 2023-2026</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UBICACION GEOGRAFICA -->
+      <div class="container mt-5 mapaContenedor">
+        <h2 class="section-subtitle">
+          <i class="fa-solid fa-map-location"></i> Ubicación Geográfica
+        </h2>
+        <div class="map-container">
+          <!-- Reemplaza el src con el enlace del iframe copiado de Google Maps -->
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15842.833428906013!2d-79.88407284458006!3d-6.925422999999982!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x904ce3a487506793%3A0xbd8cafc37fbbb87c!2sMunicipalidad%20de%20Puerto%20Eten!5e0!3m2!1ses!2spe!4v1723153198469!5m2!1ses!2spe"
+            width="600"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+
+      <!-- CARRUSEL DE ENLACES DE INTERES -->
+      <div class="container mt-5 contlink">
+        <h2 class="section-subtitle">
+          <i class="fa-solid fa-link"></i> Enlaces de Interés
+        </h2>
+        <div class="enlaces-interes">
+          <!-- Enlace 1 -->
+          <div class="enlace-item">
+            <a href="https://www.sunat.gob.pe" target="_blank">
+              <img src="https://e.rpp-noticias.io/large/2015/02/02/1466486.jpg" alt="SUNAT" />
+              <div class="overlay">
+                <div class="overlay-text">SUNAT</div>
+              </div>
+            </a>
+          </div>
+          <!-- Enlace 2 -->
+          <div class="enlace-item">
+            <a href="https://www.reniec.gob.pe" target="_blank">
+              <img src="https://pbs.twimg.com/profile_images/1742219104197455872/nvXgvDmw_400x400.jpg" alt="RENIEC" />
+              <div class="overlay">
+                <div class="overlay-text">RENIEC</div>
+              </div>
+            </a>
+          </div>
+          <!-- Enlace 3 -->
+          <div class="enlace-item">
+            <a href="https://www.gob.pe/sis" target="_blank">
+              <img src="https://cdn.www.gob.pe/uploads/document/file/1088464/standard_2020200730-107894-15drqpx.jpg" alt="Migraciones" />
+              <div class="overlay">
+                <div class="overlay-text">SIS</div>
+              </div>
+            </a>
+          </div>
+          <!-- Enlace 4 -->
+          <div class="enlace-item">
+            <a href="https://www.gob.pe/osce" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/1/1b/Oscee.jpg" alt="SUNEDU" />
+              <div class="overlay">
+                <div class="overlay-text">OSCE</div>
+              </div>
+            </a>
+          </div>
+          <!-- Enlace 5 -->
+          <div class="enlace-item">
+            <a href="https://www.gob.pe/mef" target="_blank">
+              <img src="https://www.munitorata.gob.pe/wp-content/uploads/2019/02/LOGO-MEF-WEBTORATA.jpg" alt="Gob.pe" />
+              <div class="overlay">
+                <div class="overlay-text">MEF</div>
+              </div>
+            </a>
+          </div>
+          <!-- Enlace 6 -->
+          <div class="enlace-item">
+            <a href="https://infobras.contraloria.gob.pe/infobrasweb" target="_blank">
+              <img src="https://compuempresa.com/timthumb.php?src=files/35f6f9834997eed0827dd95e17d047a6.gif&h=200&w=200&zc=2" alt="OSCE" />
+              <div class="overlay">
+                <div class="overlay-text">INFOBRAS</div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- FOOTER -->
+      <div id="footer"></div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
@@ -114,16 +223,16 @@
 
     <!-- Include html's -->
     <script>
-        function loadHTML(selector, url) {
-            fetch(url)
-                .then(response => response.text())
-                .then(data => {
-                    document.querySelector(selector).innerHTML = data;
-                });
-        }
+      function loadHTML(selector, url) {
+        fetch(url)
+          .then((response) => response.text())
+          .then((data) => {
+            document.querySelector(selector).innerHTML = data;
+          });
+      }
 
-        loadHTML('#header', 'header.html');
-        loadHTML('#footer', 'footer.html');
+      loadHTML("#header", "header.html");
+      loadHTML("#footer", "footer.html");
     </script>
-</body>
+  </body>
 </html>

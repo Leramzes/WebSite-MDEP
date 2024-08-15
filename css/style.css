@@ -159,7 +159,6 @@ header {
 
 .navbar-nav .nav-item.dropdown:hover > .nav-link::after {
   content: "";
-  /* Flechita permanece visible y en color naranja */
   background-color: #046d8b;
   /* Color de la flecha al pasar el cursor */
 }

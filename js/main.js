@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const dropdownItems = document.querySelectorAll('.nav-item.dropdown');
 
     dropdownItems.forEach(item => {
-        item.addEventListener('mouseover', function() {
+        item.addEventListener('mouseover', function () {
             const dropdownMenu = this.querySelector('.dropdown-menu');
             if (dropdownMenu) {
                 dropdownMenu.style.display = 'block';
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        item.addEventListener('mouseout', function() {
+        item.addEventListener('mouseout', function () {
             const dropdownMenu = this.querySelector('.dropdown-menu');
             if (dropdownMenu) {
                 dropdownMenu.style.opacity = '0';
@@ -23,3 +23,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+

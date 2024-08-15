@@ -42,3 +42,38 @@ function processAuthoritiesCSV(csvText) {
         }
     });
 }
+
+
+// Cargar y mostrar areas desde el CSV
+
+function loadAreasServicios() {
+    fetch('/data/areas.csv')
+        .then(response => response.text())
+        .then(csv => {
+            const rows = csv.split('\n').slice(1); // Saltar la cabecera
+            const container = document.querySelector('.servContent');
+
+            rows.forEach(row => {
+                const [nombre, imagen, correo] = row.split(',');
+
+                // Crear la tarjeta
+                const card = document.createElement('div');
+                card.className = 'col-md-3 mb-4';
+                card.innerHTML = `
+                    <div>
+                        <div class="service-card">
+                            <img src="images/servicios_areas/${imagen.trim()}" alt="${nombre.trim()}">
+                            <h5>${nombre.trim()}</h5>
+                            <p>${correo.trim()}</p>
+                        </div>
+                    </div>
+                `;
+
+                // Agregar la tarjeta al contenedor
+                container.appendChild(card);
+            });
+        })
+        .catch(error => console.error('Error al cargar el CSV:', error));
+}
+
+document.addEventListener('DOMContentLoaded', loadAreasServicios);

@@ -16,6 +16,34 @@ body::after {
   z-index: 1000;
 }
 
+/*Icono WebMail*/
+.watermark-icon {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  z-index: 1000;
+  border-radius: 50%; /* Hace que el ícono sea circular */
+  overflow: hidden;
+  width: 70px; /* Ajusta el tamaño del ícono */
+  height: 70px; /* Ajusta el tamaño del ícono */
+  background-color: rgba(0, 0, 0, 0.5); /* Color de fondo opcional */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.watermark-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor */
+  transition: transform 0.3s ease-in-out;
+}
+
+.watermark-icon:hover img {
+  transform: scale(1.2); /* Efecto de zoom al pasar el mouse */
+}
+
+
 /* Contenedor principal para asegurar que el contenido principal y el footer se extiendan correctamente */
 .main-content {
   min-height: 100vh;
@@ -331,21 +359,23 @@ iframe {
 }
 
 .service-card img {
-  width: 100px;
-  height: 100px;
-  margin-bottom: 15px;
+  width: 70px;
+  height: 70px;
+  margin-bottom: 10px;
 }
 
 .service-card h5 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 10px;
   color: #333;
 }
 
 .service-card p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: #666;
+  word-wrap: break-word;
 }
+
 
 /* Estilo para la cuadrícula de imágenes */
 .contlink {

@@ -1,6 +1,6 @@
 
 // Cargar y mostrar autoridades desde el CSV
-const csvFilePath = '/data/autoridades.csv';
+const csvFilePath = '../data/autoridades.csv';
 
 fetch(csvFilePath)
     .then(response => response.text())
@@ -24,7 +24,7 @@ function processAuthoritiesCSV(csvText) {
         const cardHTML = `
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="/images/consejo/image.png" class="card-img-top" alt="${rol}">
+                    <img src="../images/consejo/image.png" class="card-img-top" alt="${rol}">
                     <div class="card-body">
                         <a href="${link}" target="_blank"><h5 class="card-title">${nombre}</h5></a>
                         <p class="card-text">${email}</p>
@@ -47,7 +47,7 @@ function processAuthoritiesCSV(csvText) {
 // Cargar y mostrar areas desde el CSV
 
 function loadAreasServicios() {
-    fetch('/data/areas.csv')
+    fetch('../data/areas.csv')
         .then(response => response.text())
         .then(csv => {
             const rows = csv.split('\n').slice(1); // Saltar la cabecera
@@ -62,7 +62,7 @@ function loadAreasServicios() {
                 card.innerHTML = `
                     <div>
                         <div class="service-card">
-                            <img src="images/servicios_areas/${imagen.trim()}" alt="${nombre.trim()}">
+                            <img src="../images/servicios_areas/${imagen.trim()}" alt="${nombre.trim()}">
                             <h5>${nombre.trim()}</h5>
                             <p>${correo.trim()}</p>
                         </div>

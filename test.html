@@ -9,70 +9,14 @@
     <link rel="shortcut icon" href="images/logoPNG.ico" type="image/x-icon">
     <!-- ARCHIVO CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/distrito.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <style>
-        /* Contenedor principal */
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
-
-        /* Menú lateral */
-        .side-menu {
-            width: 250px;
-            background-color: #2e4550;
-            padding: 15px;
-            color: #fff;
-            margin-right: 20px;
-        }
-
-        .side-menu h3 {
-            color: #fff;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-        }
-
-        .side-menu ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .side-menu ul li {
-            margin-bottom: 10px;
-        }
-
-        .side-menu ul li a {
-            text-decoration: none;
-            color: #cfd8dc;
-            font-weight: bold;
-            display: block;
-            padding: 10px;
-            border-radius: 5px;
-        }
-
-        .side-menu ul li a:hover {
-            background-color: #37474f;
-            color: #fff;
-        }
-
-        /* Estilos del contenido principal */
-        .content {
-            flex: 1;
-            padding: 20px;
-        }
-
-        /* Asegura que el menú lateral y el contenido se apilen en pantallas pequeñas */
-        @media (max-width: 768px) {
-            .side-menu {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-        }
+        /* Diseño del contenedor principal */
     </style>
 </head>
 
@@ -80,51 +24,29 @@
     <!-- HEADER -->
     <div id="header"></div>
 
-    <!-- CONTENIDO PRINCIPAL -->
-    <div class="main-content container">
-        <!-- MENÚ LATERAL -->
-        <aside class="side-menu">
-            <h3>Explora el Distrito</h3>
-            <ul>
-                <li><a href="#historia">Historia</a></li>
-                <li><a href="#himno">Himno</a></li>
-                <li><a href="#playas">Playas</a></li>
-                <li><a href="#lugares">Lugares Turísticos</a></li>
-            </ul>
-        </aside>
+    <div class="container mt-5">
+        <div class="main-content">
+            <!-- MENÚ LATERAL -->
+            <nav class="navbar navbar-expand-lg navbar-light p-0">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#distritoMenu"
+                    aria-controls="distritoMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse side-menu" id="distritoMenu">
+                    <h3>Explora el Distrito</h3>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link" data-content="historia">Historia</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-content="himno">Himno</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-content="playas">Playas</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link" data-content="lugares">Lugares Turísticos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
 
-        <!-- CONTENIDO -->
-        <div class="content">
-            <!-- HISTORIA -->
-            <div id="historia" class="container mt-5">
-                <h2 class="section-subtitle">
-                    <i class="fa-solid fa-landmark"></i> Historia
-                </h2>
-                <p>Aquí va la información sobre la historia del distrito...</p>
-            </div>
-
-            <!-- HIMNO -->
-            <div id="himno" class="container mt-5">
-                <h2 class="section-subtitle">
-                    <i class="fa-solid fa-flag"></i> Himno
-                </h2>
-                <p>Aquí va la información sobre el himno del distrito...</p>
-            </div>
-
-            <!-- PLAYAS -->
-            <div id="playas" class="container mt-5">
-                <h2 class="section-subtitle">
-                    <i class="fa-solid fa-umbrella-beach"></i> Playas
-                </h2>
-                <p>Aquí va la información sobre las playas del distrito...</p>
-            </div>
-
-            <!-- LUGARES TURÍSTICOS -->
-            <div id="lugares" class="container mt-5">
-                <h2 class="section-subtitle">
-                    <i class="fa-solid fa-signs-post"></i> Lugares Turísticos
-                </h2>
-                <p>Aquí va la información sobre los lugares turísticos del distrito...</p>
+            <!-- CONTENIDO PRINCIPAL -->
+            <div id="main-content" class="content">
+                <p>Seleccione una opción del menú para ver más información.</p>
             </div>
         </div>
     </div>
@@ -139,7 +61,7 @@
     <script src="js/main.js"></script>
     <script src="js/loadData.js"></script>
 
-    <!-- Include HTML's -->
+    <!-- Include html's -->
     <script>
         function loadHTML(selector, url) {
             fetch(url)
@@ -151,6 +73,7 @@
 
         loadHTML('#header', 'header.html');
         loadHTML('#footer', 'footer.html');
+
     </script>
 </body>
 

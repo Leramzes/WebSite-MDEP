@@ -1,0 +1,76 @@
+/* Estilos del menú lateral */
+.side-menu {
+    width: 250px;
+    background-color: #33505e;
+    padding: 15px;
+    color: #fff;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+.side-menu h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    text-align: center;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.side-menu ul li {
+    margin-bottom: 10px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative; /* Necesario para la línea debajo */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.side-menu ul li a:hover,
+.side-menu ul li a.active {
+    background-color: #ffffff;  /* Fondo blanco para el enlace activo */
+    color: #33505e;  /* Color del texto para el enlace activo */
+}
+
+/* Estilos del contenido principal */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    max-width: 100%; /* Ajusta este valor según lo que necesites */
+    margin-bottom: 20px;
+}
+
+/* Asegura que el menú lateral y el contenido se apilen en pantallas pequeñas */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+
+    .side-menu {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+}
+
+/* Estilos para el botón de hamburguesa */
+.navbar-toggler {
+    background-color: #2e4550;
+    border: none;
+    color: white;
+}

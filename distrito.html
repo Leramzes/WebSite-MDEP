@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="images/logoPNG.ico" type="image/x-icon">
     <!-- ARCHIVO CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/distrito.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <!-- Font Awesome -->
@@ -22,34 +23,31 @@
 
         <!-- HISTORIA -->
         <div class="container mt-5">
-            <h2 class="section-subtitle">
-                <i class="fa-solid fa-landmark"></i> Historia
-            </h2>
-            
-        </div>
+            <div class="main-content">
+                <!-- MENÚ LATERAL -->
+                <nav class="navbar navbar-expand-lg navbar-light p-0">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#distritoMenu"
+                        aria-controls="distritoMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse side-menu" id="distritoMenu">
+                        <h3>Explora el Distrito</h3>
+                        <ul class="navbar-nav">
+                            <li class="nav-item"><a href="#" class="nav-link active" data-content="historia">Historia</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link" data-content="himno">Himno</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link" data-content="playas">Playas</a></li>
+                            <li class="nav-item"><a href="#" class="nav-link" data-content="lugares">Lugares
+                                    Turísticos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-        <!-- HIMNO -->
-        <div class="container mt-5">
-            <h2 class="section-subtitle">
-                <i class="fa-solid fa-flag"></i> Himno
-            </h2>
-            
-        </div>
-
-        <!-- PLAYAS -->
-        <div class="container mt-5">
-            <h2 class="section-subtitle">
-                <i class="fa-solid fa-umbrella-beach"></i> Playas
-            </h2>
-            
-        </div>
-
-        <!-- Lugares Turísticos -->
-        <div class="container mt-5">
-            <h2 class="section-subtitle">
-                <i class="fa-solid fa-signs-post"></i> Lugares Turísticos
-            </h2>
-            
+                <!-- CONTENIDO PRINCIPAL -->
+                <div id="main-content" class="content">
+                    <p>Seleccione una opción del menú para ver más información.</p>
+                </div>
+            </div>
         </div>
 
         <!-- FOOTER -->

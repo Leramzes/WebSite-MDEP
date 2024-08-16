@@ -1,151 +1,157 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enlaces de Interés</title>
+    <title>Municipalidad de Puerto Eten</title>
+    <!-- ICONO DE PAGINA -->
+    <link rel="shortcut icon" href="images/logoPNG.ico" type="image/x-icon">
+    <!-- ARCHIVO CSS -->
+    <link rel="stylesheet" href="css/style.css">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
     <style>
-        /* Estilo para la cuadrícula de imágenes */
-        .enlaces-interes {
+        /* Contenedor principal */
+        .main-content {
             display: flex;
             flex-wrap: wrap;
-            justify-content: space-around;
-            gap: 15px;
-            margin-top: 30px;
+            margin-top: 20px;
         }
 
-        .enlace-item {
-            position: relative;
-            width: 160px;
-            height: 100px;
-            overflow: hidden;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+        /* Menú lateral */
+        .side-menu {
+            width: 250px;
+            background-color: #2e4550;
+            padding: 15px;
+            color: #fff;
+            margin-right: 20px;
         }
 
-        .enlace-item:hover {
-            transform: scale(1.05);
+        .side-menu h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
         }
 
-        .enlace-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border-radius: 10px;
-            transition: opacity 0.3s ease;
+        .side-menu ul {
+            list-style: none;
+            padding: 0;
         }
 
-        .enlace-item:hover img {
-            opacity: 0.8;
+        .side-menu ul li {
+            margin-bottom: 10px;
         }
 
-        .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-            width: 100%;
-            height: 0;
-            transition: .5s ease;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
+        .side-menu ul li a {
+            text-decoration: none;
+            color: #cfd8dc;
+            font-weight: bold;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
         }
 
-        .enlace-item:hover .overlay {
-            height: 50%;
+        .side-menu ul li a:hover {
+            background-color: #37474f;
+            color: #fff;
         }
 
-        .overlay-text {
-            color: white;
-            font-size: 14px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
+        /* Estilos del contenido principal */
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        /* Asegura que el menú lateral y el contenido se apilen en pantallas pequeñas */
+        @media (max-width: 768px) {
+            .side-menu {
+                width: 100%;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
-<body>
 
-<div class="container">
-    <h2 class="text-center">Enlaces de Interés</h2>
-    <div class="enlaces-interes">
-        <!-- Enlace 1 -->
-        <div class="enlace-item">
-            <a href="https://www.sunat.gob.pe" target="_blank">
-                <img src="images/sunat.jpg" alt="SUNAT">
-                <div class="overlay">
-                    <div class="overlay-text">SUNAT</div>
-                </div>
-            </a>
-        </div>
-        <!-- Enlace 2 -->
-        <div class="enlace-item">
-            <a href="https://www.reniec.gob.pe" target="_blank">
-                <img src="images/reniec.jpg" alt="RENIEC">
-                <div class="overlay">
-                    <div class="overlay-text">RENIEC</div>
-                </div>
-            </a>
-        </div>
-        <!-- Enlace 3 -->
-        <div class="enlace-item">
-            <a href="https://www.migraciones.gob.pe" target="_blank">
-                <img src="images/migraciones.jpg" alt="Migraciones">
-                <div class="overlay">
-                    <div class="overlay-text">Migraciones</div>
-                </div>
-            </a>
-        </div>
-        <!-- Enlace 4 -->
-        <div class="enlace-item">
-            <a href="https://www.sunedu.gob.pe" target="_blank">
-                <img src="images/sunedu.jpg" alt="SUNEDU">
-                <div class="overlay">
-                    <div class="overlay-text">SUNEDU</div>
-                </div>
-            </a>
-        </div>
-        <!-- Enlace 5 -->
-        <div class="enlace-item">
-            <a href="https://www.gob.pe" target="_blank">
-                <img src="images/gobpe.jpg" alt="Gob.pe">
-                <div class="overlay">
-                    <div class="overlay-text">Gob.pe</div>
-                </div>
-            </a>
-        </div>
-        <!-- Enlace 6 -->
-        <div class="enlace-item">
-            <a href="https://www.osce.gob.pe" target="_blank">
-                <img src="images/osce.jpg" alt="OSCE">
-                <div class="overlay">
-                    <div class="overlay-text">OSCE</div>
-                </div>
-            </a>
-        </div>
-        <!-- Enlace 7 -->
-        <div class="enlace-item">
-            <a href="https://www.mtc.gob.pe" target="_blank">
-                <img src="images/mtc.jpg" alt="MTC">
-                <div class="overlay">
-                    <div class="overlay-text">MTC</div>
-                </div>
-            </a>
+<body>
+    <!-- HEADER -->
+    <div id="header"></div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <div class="main-content container">
+        <!-- MENÚ LATERAL -->
+        <aside class="side-menu">
+            <h3>Explora el Distrito</h3>
+            <ul>
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#himno">Himno</a></li>
+                <li><a href="#playas">Playas</a></li>
+                <li><a href="#lugares">Lugares Turísticos</a></li>
+            </ul>
+        </aside>
+
+        <!-- CONTENIDO -->
+        <div class="content">
+            <!-- HISTORIA -->
+            <div id="historia" class="container mt-5">
+                <h2 class="section-subtitle">
+                    <i class="fa-solid fa-landmark"></i> Historia
+                </h2>
+                <p>Aquí va la información sobre la historia del distrito...</p>
+            </div>
+
+            <!-- HIMNO -->
+            <div id="himno" class="container mt-5">
+                <h2 class="section-subtitle">
+                    <i class="fa-solid fa-flag"></i> Himno
+                </h2>
+                <p>Aquí va la información sobre el himno del distrito...</p>
+            </div>
+
+            <!-- PLAYAS -->
+            <div id="playas" class="container mt-5">
+                <h2 class="section-subtitle">
+                    <i class="fa-solid fa-umbrella-beach"></i> Playas
+                </h2>
+                <p>Aquí va la información sobre las playas del distrito...</p>
+            </div>
+
+            <!-- LUGARES TURÍSTICOS -->
+            <div id="lugares" class="container mt-5">
+                <h2 class="section-subtitle">
+                    <i class="fa-solid fa-signs-post"></i> Lugares Turísticos
+                </h2>
+                <p>Aquí va la información sobre los lugares turísticos del distrito...</p>
+            </div>
         </div>
     </div>
-</div>
 
-<!-- Bootstrap JS, jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- FOOTER -->
+    <div id="footer"></div>
 
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/loadData.js"></script>
+
+    <!-- Include HTML's -->
+    <script>
+        function loadHTML(selector, url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector(selector).innerHTML = data;
+                });
+        }
+
+        loadHTML('#header', 'header.html');
+        loadHTML('#footer', 'footer.html');
+    </script>
 </body>
+
 </html>

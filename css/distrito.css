@@ -39,6 +39,7 @@
 .side-menu ul li a:hover,
 .side-menu ul li a.active {
     background-color: #ffffff;  /* Fondo blanco para el enlace activo */
+    padding: 10px;
     color: #33505e;  /* Color del texto para el enlace activo */
 }
 

@@ -1,11 +1,10 @@
-
 // Cargar y mostrar autoridades desde el CSV
 const csvFilePath = './data/autoridades.csv';
 
 fetch(csvFilePath)
     .then(response => response.text())
     .then(csvText => processAuthoritiesCSV(csvText))
-    .catch(error => console.error('Error al cargar el archivo CSV:', error));
+    .catch(error => console.error('Error al cargar el archivo autoridades.csv:', error));
 
 function processAuthoritiesCSV(csvText) {
     const rows = csvText.split('\n').slice(1); // Divide el texto en filas y omite el encabezado
@@ -24,7 +23,7 @@ function processAuthoritiesCSV(csvText) {
         const cardHTML = `
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="./images/consejo/image.png" class="card-img-top" alt="${rol}">
+                    <img src="/images/consejo/image.png" class="card-img-top" alt="${rol}">
                     <div class="card-body">
                         <a href="${link}" target="_blank"><h5 class="card-title">${nombre}</h5></a>
                         <p class="card-text">${email}</p>
@@ -42,6 +41,8 @@ function processAuthoritiesCSV(csvText) {
         }
     });
 }
+
+
 
 
 // Cargar y mostrar areas desde el CSV
@@ -73,7 +74,7 @@ function loadAreasServicios() {
                 container.appendChild(card);
             });
         })
-        .catch(error => console.error('Error al cargar el CSV:', error));
+        .catch(error => console.error('Error al cargar el CSV areas:', error));
 }
 
 document.addEventListener('DOMContentLoaded', loadAreasServicios);

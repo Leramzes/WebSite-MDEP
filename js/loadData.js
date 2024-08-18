@@ -23,7 +23,7 @@ function processAuthoritiesCSV(csvText) {
         const cardHTML = `
             <div class="col-md-4 mb-3">
                 <div class="card">
-                    <img src="/images/consejo/image.png" class="card-img-top" alt="${rol}">
+                    <img src="./images/consejo/image.png" class="card-img-top" alt="${rol}">
                     <div class="card-body">
                         <a href="${link}" target="_blank"><h5 class="card-title">${nombre}</h5></a>
                         <p class="card-text">${email}</p>

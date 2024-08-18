@@ -51,6 +51,29 @@
     max-width: 100%; /* Ajusta este valor según lo que necesites */
     margin-bottom: 20px;
 }
+/* Contenido de cada sección */
+.section-content {
+    margin-bottom: 2rem;
+    padding: 10px;
+}
+
+/* Subtítulos de sección */
+.subtitulo {
+    font-size: 1.2rem;
+    color: #2e4550; /* Color del subtítulo */
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid #2e4550; /* Línea debajo del subtítulo */
+    padding-bottom: 0.25rem;
+}
+
+/* Texto de sección */
+.section-text {
+    font-size: 1rem;
+    color: #666666; /* Color del texto */
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
 
 /* Asegura que el menú lateral y el contenido se apilen en pantallas pequeñas */
 @media (max-width: 768px) {

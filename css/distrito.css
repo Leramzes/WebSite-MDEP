@@ -46,10 +46,10 @@
 /* Estilos del contenido principal */
 .content {
     flex: 1;
-    padding: 20px;
+    padding: 10px;
     background-color: #fff;
     max-width: 100%; /* Ajusta este valor según lo que necesites */
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 /* Contenido de cada sección */
 .section-content {
@@ -97,4 +97,8 @@
     background-color: #2e4550;
     border: none;
     color: white;
+}
+
+#imghimno{
+    text-align: center;
 }

@@ -1,8 +1,8 @@
-Rol,Nombre,Email,Link
-Alcalde,Luis Enrique Baca Castañeda,alcaldia@municipalidadetenpuerto.pe,https://shorturl.at/tsyCA
-Gerente,Robert William Ñiquen Lumbre,gerenciamunicipal@municipalidadetenpuerto.pe,https://shorturl.at/42WRs
-Regidor,Adriana Soledad Bossio Alvarez,adrianabossio@municipalidadetenpuerto.pe,https://shorturl.at/qOT2D
-Regidor,Fernando Elias Manuel Casusol Moreno,fernandocasusolmoreno@municipalidadetenpuerto.pe,https://shorturl.at/JU9QC
-Regidor,Julio Augusto Silva Rumiche,juliosilvarumiche@municipalidadetenpuerto.pe,https://shorturl.at/yA7Nu
-Regidor,Laura Yolanda Mera Effio,laurameraefio@municipalidadetenpuerto.pe,https://rb.gy/xrb2el
-Regidor,Piero Ademir Periche Isique,pieropericheisique@municipalidadetenpuerto.pe,https://rb.gy/jefm9r
+Rol,Nombre,Email,Link,img
+Alcalde,Luis Enrique Baca Castañeda,alcaldia@municipalidadetenpuerto.pe,https://shorturl.at/tsyCA,./images/consejo/alcalde.png
+Gerente,Robert William Ñiquen Lumbre,gerenciamunicipal@municipalidadetenpuerto.pe,https://shorturl.at/42WRs,./images/consejo/gerente.png
+Regidor,Adriana Soledad Bossio Alvarez,adrianabossio@municipalidadetenpuerto.pe,https://shorturl.at/qOT2D,./images/consejo/adribossio.png
+Regidor,Fernando Elias Manuel Casusol Moreno,fernandocasusolmoreno@municipalidadetenpuerto.pe,https://shorturl.at/JU9QC,./images/consejo/casusol.png
+Regidor,Julio Augusto Silva Rumiche,juliosilvarumiche@municipalidadetenpuerto.pe,https://shorturl.at/yA7Nu,./images/consejo/juliorumiche.png
+Regidor,Laura Yolanda Mera Effio,laurameraefio@municipalidadetenpuerto.pe,https://rb.gy/xrb2el,./images/consejo/laura.png
+Regidor,Piero Ademir Periche Isique,pieropericheisique@municipalidadetenpuerto.pe,./images/consejo/piero.png

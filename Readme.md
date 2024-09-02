@@ -1,2 +1,1 @@
-# POR REALIZAR
-### - PULIR PAGINA PARA PRESNETACION DEL DIA Viernes 16 DE AGOSTO
+# Página web de la Municipalidad Distrital de Eten Puerto completa
